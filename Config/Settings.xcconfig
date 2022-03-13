@@ -10,7 +10,8 @@
 // with the name “j2objc-dist” to the parent directory of this project.
 
 // The path should be written without quotes, when modified use Xcode's Product -> Clean
-J2OBJC_HOME = ../j2objc-dist;
+J2OBJC_HOME = /Users/mono/Downloads/j2objc-2.8;
+JAVA_HOME = /Library/Java/JavaVirtualMachines/jdk-15.0.2.jdk/Contents/Home
 
-HEADER_SEARCH_PATHS = "${J2OBJC_HOME}/frameworks/JRE.framework/Headers";
+HEADER_SEARCH_PATHS = "${J2OBJC_HOME}/frameworks/JRE.xcframework/Headers";
 FRAMEWORK_SEARCH_PATHS = "${J2OBJC_HOME}/frameworks";

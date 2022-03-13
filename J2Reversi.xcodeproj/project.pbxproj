@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -32,12 +32,12 @@
 		0650A42718DF6AB800C743D6 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0650A42618DF6AB800C743D6 /* Security.framework */; };
 		0659E5A41F846AF300D373F9 /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 0659E5A31F846AF300D373F9 /* libiconv.tbd */; };
 		066FEF681C10D7E200255438 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 066FEF661C10D7E200255438 /* LaunchScreen.storyboard */; };
-		066FEF6A1C10DE6500255438 /* JRE.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 066FEF691C10DE6500255438 /* JRE.framework */; };
 		0683A310163DE1C800407C3A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0683A30F163DE1C800407C3A /* UIKit.framework */; };
 		0683A312163DE1C800407C3A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0683A311163DE1C800407C3A /* Foundation.framework */; };
 		0683A314163DE1C800407C3A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0683A313163DE1C800407C3A /* CoreGraphics.framework */; };
 		3D9F90491934DA2F00738699 /* J2RViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D9F90451934DA2F00738699 /* J2RViewController_iPad.xib */; };
 		3D9F904A1934DA2F00738699 /* J2RViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D9F90471934DA2F00738699 /* J2RViewController_iPhone.xib */; };
+		FEA2AA7627DB4627005136C5 /* JRE.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE9C722227DA44BE00388647 /* JRE.xcframework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXBuildRule section */
@@ -45,12 +45,14 @@
 			isa = PBXBuildRule;
 			compilerSpec = com.apple.compilers.proxy.script;
 			fileType = sourcecode.java;
+			inputFiles = (
+			);
 			isEditable = 1;
 			outputFiles = (
 				"${DERIVED_FILES_DIR}/${INPUT_FILE_BASE}.m",
 				"${DERIVED_FILES_DIR}/${INPUT_FILE_BASE}.h",
 			);
-			script = "if [ ! -f \"${J2OBJC_HOME}/j2objc\" ]; then echo \"J2OBJC_HOME not correctly defined in Settings.xcconfig, currently set to '${J2OBJC_HOME}'\"; exit 1; fi;\n\"${J2OBJC_HOME}/j2objc\" -d ${DERIVED_FILES_DIR} -sourcepath \"${PROJECT_DIR}/Classes\" --no-package-directories -use-arc --prefix Othello.Engine=JOE -g ${INPUT_FILE_PATH};";
+			script = "if [ ! -f \"${J2OBJC_HOME}/j2objc\" ]; then echo \"J2OBJC_HOME not correctly defined in Settings.xcconfig, currently set to '${J2OBJC_HOME}'\"; exit 1; fi;\n\"${J2OBJC_HOME}/j2objc\" -d ${DERIVED_FILES_DIR} -sourcepath \"${PROJECT_DIR}/Classes\" --no-package-directories -use-arc --prefix Othello.Engine=JOE -g ${INPUT_FILE_PATH};\n";
 		};
 /* End PBXBuildRule section */
 
@@ -87,13 +89,14 @@
 		0650A42618DF6AB800C743D6 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		0659E5A31F846AF300D373F9 /* libiconv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.tbd; path = usr/lib/libiconv.tbd; sourceTree = SDKROOT; };
 		066FEF671C10D7E200255438 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = Classes/en.lproj/LaunchScreen.storyboard; sourceTree = SOURCE_ROOT; };
-		066FEF691C10DE6500255438 /* JRE.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JRE.framework; path = "${J2OBJC_HOME}/frameworks/JRE.framework"; sourceTree = "<group>"; };
 		0683A30B163DE1C800407C3A /* J2Reversi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = J2Reversi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0683A30F163DE1C800407C3A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		0683A311163DE1C800407C3A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		0683A313163DE1C800407C3A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		3D9F90461934DA2F00738699 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = Classes/en.lproj/J2RViewController_iPad.xib; sourceTree = SOURCE_ROOT; };
 		3D9F90481934DA2F00738699 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = Classes/en.lproj/J2RViewController_iPhone.xib; sourceTree = SOURCE_ROOT; };
+		FE9C722227DA44BE00388647 /* JRE.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = JRE.xcframework; path = "../../../Downloads/j2objc-2.8/frameworks/JRE.xcframework"; sourceTree = "<group>"; };
+		FEA2AA7527DB45F1005136C5 /* PricingCalculatorService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PricingCalculatorService.h; path = "../../pricing-engine-java-poc/build_output/com/threesixtyf/pricingengine/services/PricingCalculatorService.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,8 +104,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FEA2AA7627DB4627005136C5 /* JRE.xcframework in Frameworks */,
 				0659E5A41F846AF300D373F9 /* libiconv.tbd in Frameworks */,
-				066FEF6A1C10DE6500255438 /* JRE.framework in Frameworks */,
 				0650A42718DF6AB800C743D6 /* Security.framework in Frameworks */,
 				0683A310163DE1C800407C3A /* UIKit.framework in Frameworks */,
 				0683A312163DE1C800407C3A /* Foundation.framework in Frameworks */,
@@ -183,8 +186,8 @@
 		0683A30E163DE1C800407C3A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FE9C722227DA44BE00388647 /* JRE.xcframework */,
 				0659E5A31F846AF300D373F9 /* libiconv.tbd */,
-				066FEF691C10DE6500255438 /* JRE.framework */,
 				0650A42618DF6AB800C743D6 /* Security.framework */,
 				0683A30F163DE1C800407C3A /* UIKit.framework */,
 				0683A311163DE1C800407C3A /* Foundation.framework */,
@@ -196,6 +199,7 @@
 		0683A315163DE1C800407C3A /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				FEA2AA7527DB45F1005136C5 /* PricingCalculatorService.h */,
 				064E072218E90BD400F5DF6B /* J2RAppDelegate.h */,
 				064E072318E90BD400F5DF6B /* J2RAppDelegate.m */,
 				064E072418E90BD400F5DF6B /* J2RBoard.h */,
@@ -276,6 +280,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 			);
 			mainGroup = 0683A300163DE1C800407C3A;
@@ -464,16 +469,19 @@
 				CLANG_WARN_STRICT_PROTOTYPES = NO;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = "${J2OBJC_HOME}/frameworks";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "J2Reversi-Prefix.pch";
-				HEADER_SEARCH_PATHS = "$(inherited)";
+				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = "J2Reversi-Info.plist";
 				INSTALL_OWNER = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				LIBRARY_SEARCH_PATHS = "${J2OBJC_HOME}/lib";
+				OTHER_LDFLAGS = "-ljre_emul";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.google.j2objc.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				USER_HEADER_SEARCH_PATHS = "${J2OBJC_HOME}/include";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -486,16 +494,19 @@
 				CLANG_WARN_STRICT_PROTOTYPES = NO;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = "${J2OBJC_HOME}/frameworks";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "J2Reversi-Prefix.pch";
-				HEADER_SEARCH_PATHS = "$(inherited)";
+				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = "J2Reversi-Info.plist";
 				INSTALL_OWNER = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				LIBRARY_SEARCH_PATHS = "${J2OBJC_HOME}/lib";
+				OTHER_LDFLAGS = "-ljre_emul";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.google.j2objc.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				USER_HEADER_SEARCH_PATHS = "${J2OBJC_HOME}/include";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
